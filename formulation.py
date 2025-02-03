@@ -47,26 +47,26 @@ if st.button("Prédire"):
     st.write(output)
     
     # Graphique de précision du modèle
-    st.subheader("Évaluation du modèle")
+    #st.subheader("Évaluation du modèle")
     
     # Génération de valeurs aléatoires pour comparaison (à remplacer par de vraies valeurs de test)
-    y_true = np.random.uniform(melt_pred - 0.5, melt_pred + 0.5, 10)
-    y_pred = [melt_pred] * 10
+   # y_true = np.random.uniform(melt_pred - 0.5, melt_pred + 0.5, 10)
+    # y_pred = [melt_pred] * 10
     
     # Calcul de l'erreur
-    mae = mean_absolute_error(y_true, y_pred)
-    mse = mean_squared_error(y_true, y_pred)
+    # mae = mean_absolute_error(y_true, y_pred)
+    # mse = mean_squared_error(y_true, y_pred)
     
-    fig, ax = plt.subplots()
-    ax.scatter(y_true, y_pred, label="Prédictions vs Réel")
-    ax.plot([min(y_true), max(y_true)], [min(y_true), max(y_true)], 'r--', label="Parfaite Prédiction")
-    ax.set_xlabel("Valeurs réelles")
-    ax.set_ylabel("Valeurs prédites")
-    ax.legend()
-    st.pyplot(fig)
+    # fig, ax = plt.subplots()
+    # ax.scatter(y_true, y_pred, label="Prédictions vs Réel")
+   # ax.plot([min(y_true), max(y_true)], [min(y_true), max(y_true)], 'r--', label="Parfaite Prédiction")
+    # ax.set_xlabel("Valeurs réelles")
+    # ax.set_ylabel("Valeurs prédites")
+    # ax.legend()
+   #  st.pyplot(fig)
     
-    st.write(f"Erreur absolue moyenne (MAE) : {round(mae, 3)}")
-    st.write(f"Erreur quadratique moyenne (MSE) : {round(mse, 3)}")
+   #  st.write(f"Erreur absolue moyenne (MAE) : {round(mae, 3)}")
+    # st.write(f"Erreur quadratique moyenne (MSE) : {round(mse, 3)}")
 
 # Instructions pour l'installation et l'exécution :
 # 1. Installer Streamlit et les dépendances :
